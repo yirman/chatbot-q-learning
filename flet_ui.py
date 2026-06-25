@@ -1,3 +1,10 @@
+import sys
+import os
+
+venv_python = os.path.join(os.path.dirname(__file__), "venv", "bin", "python")
+if sys.executable != venv_python and os.path.exists(venv_python):
+    os.execv(venv_python, [venv_python] + sys.argv)
+
 import flet as ft
 from agente import ChatbotAgent
 
@@ -237,4 +244,4 @@ def main(page: ft.Page):
 
 
 if __name__ == "__main__":
-    ft.app(main)
+    ft.run(main)

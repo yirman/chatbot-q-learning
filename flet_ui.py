@@ -187,13 +187,7 @@ def main(page: ft.Page):
                 ft.Container(
                     content=ft.Row([
                         ft.Text("Chatbot Q-Learning", size=18, weight=ft.FontWeight.BOLD),
-                        ft.IconButton(
-                            icon=ft.Icons.DARK_MODE,
-                            icon_size=20,
-                            on_click=lambda e: setattr(page, 'theme_mode', ft.ThemeMode.DARK if page.theme_mode == ft.ThemeMode.LIGHT else ft.ThemeMode.LIGHT),
-                            tooltip="Cambiar tema",
-                        ),
-                    ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
+                    ], alignment=ft.MainAxisAlignment.START),
                     padding=ft.Padding(left=15, right=5, top=8, bottom=8),
                     bgcolor=ft.Colors.PRIMARY_CONTAINER,
                 ),
